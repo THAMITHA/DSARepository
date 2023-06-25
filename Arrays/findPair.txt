@@ -13,3 +13,26 @@ var twoSum = function(nums, target) {
     }
     return null;
 };
+
+
+timecomplexity:O(n^2)
+spacecomplexity:O(1)
+
+
+optimized solution:
+
+var twoSum = function(nums, target) {
+    const numsMap={};
+    for(let p=0;p<nums.length;p++){
+        const currentMapValue=numsMap[nums[p]];
+        if(currentMapValue>=0){
+            return [currentMapValue,p];
+        }
+        else{
+            const numberOfFind=target-nums[p];
+            numsMap[numberOfFind]=p;
+        }
+        
+    }
+    return null;
+};

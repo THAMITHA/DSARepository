@@ -29,8 +29,8 @@ var twoSum = function(nums, target) {
             return [currentMapValue,p];
         }
         else{
-            const numberOfFind=target-nums[p];
-            numsMap[numberOfFind]=p;
+            const numberToFind=target-nums[p];
+            numsMap[numberToFind]=p;
         }
         
     }

@@ -1,0 +1,29 @@
+const buildString = function(string) {
+    const builtString = [];
+    for(let p = 0; p < string.length; p++) {
+        if(string[p] !== '#') {
+            builtString.push(string[p]);
+        } else {
+            builtString.pop();
+        }
+    }
+    
+    return builtString;
+}
+
+var backspaceCompare = function(s, t) {
+    const finalS=buildString(s);
+    const finalT=buildString(t);
+
+    if(finalS.length!==finalT.length){
+        return false;
+    }
+    else{
+        for(let p=0;p<finalS.length;p++){
+            if(finalS[p]!==finalT[p]){
+                return false;
+            }
+        }
+    }
+    return true;
+};

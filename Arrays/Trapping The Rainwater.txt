@@ -19,3 +19,7 @@ var trap = function(height) {
     }
     return trapWater;
 };
+
+
+Timecomplexity : O(n^2)
+Spacecomplexity : O(1)
